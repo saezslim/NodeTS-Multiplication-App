@@ -1,3 +1,6 @@
 node_modules
 outputs/
 dist/
+
+test-destination/
+custom-outputs/

@@ -18,7 +18,7 @@ describe('CreateTableUseCase', () => {
     }
     const createTable = new CreateTable()
     const table = createTable.execute(options)
-    const dinamicNum: () => number = () => {
+    const dynamicNum: () => number = () => {
       let num = Math.random() * 10
       num = parseInt(`${num}`)
       if ( num <= 20 && num !== 0){
@@ -28,7 +28,7 @@ describe('CreateTableUseCase', () => {
     }
     
     expect(table).toContain(`${options.limit}`)
-    expect(table).toContain(`${options.base * dinamicNum()}`)
+    expect(table).toContain(`${options.base * dynamicNum()}`)
     expect(table).toContain(`15`)
 
   })
